@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  box-sizing: border-box;
   color: white;
+  font-family: sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background: #232C33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header.header, main.main{
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 60px;
+}
+
+span.green{
+  color: #8FE388;
+}
+
+
+/*header*/
+header.header {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: rgb(35,44,51);
+  background: linear-gradient(180deg, rgba(35,44,51,1) 0%, rgba(35,44,51, .9) 50%, rgba(35,44,51,0) 100%);
+  z-index: 2;
+}
+
+div.nav {
+  float: right;
+  margin-right: -30px;
+  height: 80px;
+  display: flex;
+}
+
+div.nav a {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin: auto;
+  display: block;
+  margin-right: 30px;
+  transition: .15s ease;
+  background: linear-gradient(to left, #FFAD69 50%, #eee 50%) left;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.nav a.work{
+  background: linear-gradient(to left, #8FE388 50%, #eee 50%) left;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.nav a.about {
+  background: linear-gradient(to left, #A0C1D1 50%, #eee 50%) left;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.nav a.contact {
+  background: linear-gradient(to left, #FFAD69 50%, #eee 50%) left;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.nav a:hover{
+  background-position: right;
+  cursor: pointer;
+}
+
+img.logo{
+  height: 80px;
+}
+
+/*Hero*/
+section#hero{
+  height: 300vh;
+  padding-top: 113px;
+}
+
+div.hero-content{
+  display: flex;
+  padding-top: 40px;
+}
+
+div.hero-left{
+  position: fixed;
+  padding-top: 3%;
+}
+div.hero-left-spacer{
+  opacity: 0;
+}
+
+div.hero-right {
+  padding-left: 80px;
+}
+
+div.hero-right p{
+  margin-top: 40%;
+  font-size: 36px;
+}
+
+div.hero-right p.my-name{
+  font-size: 54px;
+  font-weight: 900
+}
+
+h1{
+  font-size: 90px;
+  font-weight: 900;
+}
+
+/*work*/
+section#work{
+  background-color: #232C33;
+  z-index: 1000;
+  height: 100vh;
+  position: relative;
 }
