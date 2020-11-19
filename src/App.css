@@ -128,6 +128,62 @@ h1{
 section#work{
   background-color: #232C33;
   z-index: 1000;
-  height: 100vh;
   position: relative;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  justify-content: space-between;
+}
+
+.project-container{
+  width: 33%;
+}
+
+.project-container.selected{
+  width: 100%;
+}
+
+.project{
+  padding: 14px;
+  transition: all 0.1s ease;
+}
+
+.selected.project{
+  display: flex;
+  padding: 0;
+  transition: all 0.8s ease;
+
+}
+
+.selected.project div{
+  padding: 14px;
+  flex: 1
+}
+
+.selected.project h4{
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.project:hover{
+  cursor: pointer;
+}
+
+
+.project-image{
+  margin-top: 4px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
+  transition: all 0.1s ease;
+}
+
+.project:hover .project-image{
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.6);
+  margin-top: 0px; 
+  margin-bottom: 4px;
+
 }

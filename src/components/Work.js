@@ -1,27 +1,28 @@
 import React from 'react'
-import ProjectThumbnail from './ProjectThumbnail'
-import MainProject from './MainProject'
+import Project from './Project'
 
 function Work(props){
+    console.log('work rerender')
 
     const thumbnails = []
-    let main = ''
     for (let i = 0; i < props.projects.length; i++){
         if (props.projects[i].selected) {
-            main = <MainProject {...props.project[i]}/>
+            thumbnails.unshift(
+                <Project index={i} key={i} {...props.projects[i]}/>
+            )
         }
         else{
             thumbnails.push(
-                <ProjectThumbnail key={i} {...props.projects[i]}/>
+                <Project index={i} key={i} {...props.projects[i]} selectProject={(index) => props.selectProject(index)}/>
             )    
         }
     }
 
     return (
         <section id='work'>
-            <h2>Work</h2> 
-            {main}
-            {thumbnails}
+            <div className='projects'>
+             {thumbnails}
+            </div>
         </section>
     )    
 }
