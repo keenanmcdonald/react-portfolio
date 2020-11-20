@@ -12,7 +12,7 @@ body{
 
 header.header, main.main{
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 60px;
@@ -49,30 +49,9 @@ div.nav a {
   margin: auto;
   display: block;
   margin-right: 30px;
-  transition: .15s ease;
-  background: linear-gradient(to left, #FFAD69 50%, #eee 50%) left;
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-div.nav a.work{
-  background: linear-gradient(to left, #8FE388 50%, #eee 50%) left;
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-div.nav a.about {
-  background: linear-gradient(to left, #A0C1D1 50%, #eee 50%) left;
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-div.nav a.contact {
-  background: linear-gradient(to left, #FFAD69 50%, #eee 50%) left;
-  background-size: 200%;
+  transition: .35s ease;
+  background: linear-gradient(to right, #eee 43%, #87c3e0 53%) left;
+  background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -151,19 +130,18 @@ section#work{
   transition: all 0.1s ease;
 }
 
-.selected.project{
+.selected-project{
   display: flex;
   padding: 0;
-  transition: all 0.8s ease;
-
+  transition: all .15s ease;
 }
 
-.selected.project div{
+.selected-project div{
   padding: 14px;
   flex: 1
 }
 
-.selected.project h4{
+.selected-project h4{
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -172,6 +150,51 @@ section#work{
   cursor: pointer;
 }
 
+.project-info-container{
+  height: 100%;
+}
+
+.selected-project .project-image{
+  border-radius: 4px 4px 0 0;
+}
+
+div.link-container{
+  padding: 0;
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  margin-top: -3px;
+  border-top: solid black 1px;
+}
+
+.selected-project a.project-link{
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 14px;
+  font-size: 20px;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+a.live{
+  background: linear-gradient(to left, #6aac65 33%, #8FE388 66%) right;
+  background-size: 300%;
+  border-radius: 0 0 0 6px;
+}
+a.repo{
+  background: linear-gradient(to right, #628fa5 33%, #87c3e0 66%) left;
+  background-size: 300%;
+  border-radius: 0 0 6px 0;
+}
+
+a.live:hover{
+  background-position: left;
+}
+a.repo:hover{
+  background-position: right;
+}
 
 .project-image{
   margin-top: 4px;
@@ -185,5 +208,7 @@ section#work{
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.6);
   margin-top: 0px; 
   margin-bottom: 4px;
-
 }
+
+$aos-distance: 20px; 
+@import 'node_modules/aos/src/sass/aos.scss';
