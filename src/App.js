@@ -1,12 +1,12 @@
 import 'aos/dist/aos.css'
 import './meyer_reset.css'
-import './App.scss';
+import './App.css';
 import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Work from './components/Work'
 import Bio from './components/Bio'
-import Footer from './components/Footer'
+import Contact from './components/Contact'
 import AOS from 'aos'
 
 AOS.init()
@@ -98,8 +98,8 @@ class App extends React.Component {
           <Hero/>
           <Work transition={this.state.transition} aos={this.state.aos} projects={this.state.projects} selected={this.state.selected} selectProject={(id) => this.selectProject(id)}/>
           <Bio/>
+          <Contact/>
         </main>
-        <Footer/>
       </div>
     )
   }

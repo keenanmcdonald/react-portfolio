@@ -14,8 +14,7 @@ function Hero(props){
                 </div>
                 <div className='hero-right'>
                     <p className='my-name' data-aos='fade' data-aos-offset='260' data-aos-duration='260'>Keenan McDonald</p>
-                    <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>a web developer.</p> 
-                    <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>based in <span className='green'>Austin, TX.</span></p>
+                    <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>a software<span className='blue'> developer</span> and <span className='blue'>designer</span> based in <span className='green'>Austin, TX</span>.</p> 
                     <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>fluent in Javascript, CSS, HTML, Python, SQL</p>
                 </div>
             </div>

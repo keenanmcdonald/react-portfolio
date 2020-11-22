@@ -3,6 +3,12 @@ import React from 'react'
 function Project(props){
     function handleClick(){
         props.selectProject(props.id)
+        /*window screenTop doesn't seem to work - consider using jquery*/
+        /*
+        if (window.screenTop <  document.getElementById('work').offsetTop){
+            window.scrollTo({top: document.getElementById('work').offsetTop, behavior: 'smooth'})
+        }*/
+        
     }
 
     return (

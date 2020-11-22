@@ -22,6 +22,7 @@ function Work(props){
 
     return (
         <section id='work'>
+            <h1>Work</h1>
             <div className='projects'>
                 <SelectedProject transition={props.transition} {...selected}/>
                 {thumbnails}
