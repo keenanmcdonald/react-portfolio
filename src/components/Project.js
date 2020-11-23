@@ -8,7 +8,6 @@ function Project(props){
         if (window.screenTop <  document.getElementById('work').offsetTop){
             window.scrollTo({top: document.getElementById('work').offsetTop, behavior: 'smooth'})
         }*/
-        
     }
 
     return (

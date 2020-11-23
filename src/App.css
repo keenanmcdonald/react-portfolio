@@ -74,25 +74,29 @@ img.logo{
 
 /*Hero*/
 section#hero{
-  height: 300vh;
+  height: 400vh;
   padding-top: 113px;
   position: relative;
 }
 
 div.hero-content{
-  display: flex;
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 40px;
-  justify-content: space-between;
   position: fixed;
-  right: 0;
   padding: 60px;
 }
+
 h1{
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 900;
+  font-family: sans-serif;
+}
+
+h1.title{
+  font-size: 60px;
+  display: inline-block;
 }
 
 

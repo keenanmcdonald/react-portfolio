@@ -3,7 +3,6 @@ import React from 'react'
 function Bio(props){
     return (
         <section id='bio'>
-            <h1>About</h1>
             <div data-aos='fade' className='bio-photo-container'>
                 <img className='bio-photo' alt='keenan mcdonald' src={`/images/bio-photo.jpg`}/>
             </div>

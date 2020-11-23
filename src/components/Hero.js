@@ -7,9 +7,10 @@ class Hero extends(React.Component){
         this.state={
             displayMessage: 0,
             messages: [
-                'Keenan McDonald',
-                'A software developer and designer based in Austin, TX',
-                'Fluent in Javascript, React, Node.js, Python, Django',
+                `Hi, I'm Keenan McDonald`,
+                `I'm a software developer and designer based in Austin, TX`,
+                `I'm experiences in Javascript, React, Node.js, Python, Django, PostgreSQL...`,
+                `Check out some of my work, read more about me or learn how to contact me below.`
             ]
         }
         this.updateScroll = this.updateScroll.bind(this)
@@ -17,13 +18,11 @@ class Hero extends(React.Component){
 
     componentDidMount(){
         window.addEventListener('scroll', () => {
-            console.log()
             this.updateScroll()
         })
     }
     
     updateScroll(){
-        console.log('update scroll: ', window.scrollY)
         this.setState({displayMessage: Math.floor(window.scrollY / window.innerHeight)})
     }
 
@@ -31,12 +30,7 @@ class Hero extends(React.Component){
         return (
             <section id='hero'>
                 <div className='hero-content'>
-                    <div className='hello-container'>
-                        <h1 className='hello'>Hi, I'm</h1>
-                    </div>
-                    <div className='intro-container'>
-                        <h1 className='intro'>{this.state.messages[this.state.displayMessage]}</h1>
-                    </div>
+                    <h1 className='intro'>{this.state.messages[this.state.displayMessage]}</h1>
                 </div>
             </section>
         )    
