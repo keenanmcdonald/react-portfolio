@@ -1,25 +1,46 @@
 import React from 'react'
 
-function Hero(props){
-    return (
-        <section id='hero'>
-            <div className='hero-content'>
-                <div className='hero-left'>
-                    <h1>Hello,</h1> 
-                    <h1>I am</h1>
+class Hero extends(React.Component){
+    constructor(props){
+        super(props)
+
+        this.state={
+            displayMessage: 0,
+            messages: [
+                'Keenan McDonald',
+                'A software developer and designer based in Austin, TX',
+                'Fluent in Javascript, React, Node.js, Python, Django',
+            ]
+        }
+        this.updateScroll = this.updateScroll.bind(this)
+    }
+
+    componentDidMount(){
+        window.addEventListener('scroll', () => {
+            console.log()
+            this.updateScroll()
+        })
+    }
+    
+    updateScroll(){
+        console.log('update scroll: ', window.scrollY)
+        this.setState({displayMessage: Math.floor(window.scrollY / window.innerHeight)})
+    }
+
+    render(){
+        return (
+            <section id='hero'>
+                <div className='hero-content'>
+                    <div className='hello-container'>
+                        <h1 className='hello'>Hi, I'm</h1>
+                    </div>
+                    <div className='intro-container'>
+                        <h1 className='intro'>{this.state.messages[this.state.displayMessage]}</h1>
+                    </div>
                 </div>
-                <div className='hero-left-spacer'>
-                    <h1>Hello,</h1> 
-                    <h1>I am</h1>
-                </div>
-                <div className='hero-right'>
-                    <p className='my-name' data-aos='fade' data-aos-offset='260' data-aos-duration='260'>Keenan McDonald</p>
-                    <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>a software<span className='blue'> developer</span> and <span className='blue'>designer</span> based in <span className='green'>Austin, TX</span>.</p> 
-                    <p data-aos='fade' data-aos-offset='260' data-aos-duration='260'>fluent in Javascript, CSS, HTML, Python, SQL</p>
-                </div>
-            </div>
-        </section>
-    )
+            </section>
+        )    
+    }
 }
 
 export default Hero
