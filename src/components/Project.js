@@ -11,7 +11,7 @@ function Project(props){
     }
 
     return (
-        <div className={`project-container`} data-aos='fade' data-aos-delay={props.index*50}>
+        <div className={`project-container`} data-aos='fade' data-aos-anchor-placement='top-bottom' data-aos-delay={props.index*50}>
             <div onClick={() => handleClick()} className='project'>
                 <img className='project-image' alt={`screenshot of ${props.title}`} src={`/images/screenshots/${props.screenshotDesktop}`}/> 
             </div>

@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 body{
@@ -15,11 +15,10 @@ header.header, main.main{
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 120px;
 }
 
 section{
-  padding-top: 84px;
+  padding: 0 140px;
 }
 
 span.green{
@@ -30,9 +29,10 @@ span.blue{
 }
 
 h1{
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 900;
-  font-family: sans-serif;
+  font-family: 'Heebo', sans-serif;
+  padding-top: 50px;
 }
 
 
@@ -42,9 +42,10 @@ header.header {
   position: fixed;
   left: 0;
   right: 0;
-  background: #232c33d0;
+  background: rgb(18, 23, 27) ;
   /*background: linear-gradient(180deg, rgba(35,44,51,1) 0%, rgba(35,44,51, .9) 68%, rgba(35,44,51,0) 100%);*/
   z-index: 1001;
+  padding: 0 140px;
 }
 
 div.nav {
@@ -55,14 +56,14 @@ div.nav {
 }
 
 div.nav a {
-  font-family: sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-weight: 800;
   font-size: 24px;
   margin: auto;
   display: block;
   margin-right: 30px;
-  transition: .35s ease;
-  background: linear-gradient(to right, #eee 43%, #87c3e0 53%) left;
+  transition: .4s ease;
+  background: linear-gradient(to right, #eee 43%, #8FE388 53%) left;
   background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,24 +87,48 @@ section#hero{
   height: 400vh;
   padding-top: 113px;
   position: relative;
+  background: linear-gradient(180deg, rgb(18, 23, 27) 10%, rgba(35,44,51,1) 100%);
+}
+
+a.intro-link{
+  text-decoration: none;
+  transition: .5s ease;
+  background: linear-gradient(to right,#87c3e0 43%, #8FE388 53%) left;
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.intro-link:hover{
+  background-position: right;
+  cursor: pointer;
 }
 
 div.hero-content{
   max-width: 1600px;
+  height: calc(100vh - 160px);
   margin-right: auto;
   margin-left: auto;
-  padding-top: 40px;
   position: fixed;
-  padding: 60px;
+  right: 120px;
+  left: 120px;
 }
 
-h1.title{
-  display: inline-block;
+h1.intro{
+  padding: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
 }
 
 
 /*work*/
 section#work{
+  margin-top: 50vh;
   background-color: #232C33;
   z-index: 1000;
   position: relative;
@@ -164,6 +189,7 @@ div.link-container{
   display: flex;
   margin-top: -3px;
   border-top: solid black 1px;
+  display: none;
 }
 
 .selected-project a.project-link{
@@ -217,16 +243,13 @@ section#bio{
   z-index: 1000;
 }
 
-.bio-photo-container{
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .bio-photo{
-  width: 32%;
-  height: 32%;
-  border-radius: 100%;
+  float: left;
+  width: 33%;
+  margin: 40px;
+  margin-left: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
 p.bio-text{

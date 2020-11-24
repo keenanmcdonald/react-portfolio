@@ -7,10 +7,10 @@ class Hero extends(React.Component){
         this.state={
             displayMessage: 0,
             messages: [
-                `Hi, I'm Keenan McDonald`,
-                `I'm a software developer and designer based in Austin, TX`,
-                `I'm experiences in Javascript, React, Node.js, Python, Django, PostgreSQL...`,
-                `Check out some of my work, read more about me or learn how to contact me below.`
+                (<h1 className='intro'>Hi, I'm Keenan McDonald</h1> ),
+                (<h1 className='intro'>I'm a software developer and designer based in Austin, TX</h1> ),
+                (<h1 className='intro'>I'm experiences in Javascript, React, Node.js, Python, Django, PostgreSQL...</h1> ),
+                (<h1 className='intro'>Check out some of <a href='#work' className='intro-link'>my work</a>, read more <a href='#bio' className='intro-link'>about me</a>, or learn how to <a href='#contact' className='intro-link'>contact me</a> below.</h1> ),
             ]
         }
         this.updateScroll = this.updateScroll.bind(this)
@@ -30,7 +30,7 @@ class Hero extends(React.Component){
         return (
             <section id='hero'>
                 <div className='hero-content'>
-                    <h1 className='intro'>{this.state.messages[this.state.displayMessage]}</h1>
+                    {this.state.messages[this.state.displayMessage]}
                 </div>
             </section>
         )    
