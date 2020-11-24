@@ -15,7 +15,7 @@ header.header, main.main{
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 60px;
+  padding: 0 120px;
 }
 
 section{
@@ -29,16 +29,21 @@ span.blue{
   color: #87c3e0;
 }
 
+h1{
+  font-size: 50px;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+
 
 /*header*/
 header.header {
-  padding-top: 8px;
-  padding-bottom: 16px;
   position: fixed;
   left: 0;
   right: 0;
-  background: rgb(35,44,51);
-  background: linear-gradient(180deg, rgba(35,44,51,1) 0%, rgba(35,44,51, .9) 68%, rgba(35,44,51,0) 100%);
+  background: #232c33d0;
+  /*background: linear-gradient(180deg, rgba(35,44,51,1) 0%, rgba(35,44,51, .9) 68%, rgba(35,44,51,0) 100%);*/
   z-index: 1001;
 }
 
@@ -72,6 +77,10 @@ img.logo{
   height: 80px;
 }
 
+img.logo:hover{
+  cursor: pointer;
+}
+
 /*Hero*/
 section#hero{
   height: 400vh;
@@ -88,14 +97,7 @@ div.hero-content{
   padding: 60px;
 }
 
-h1{
-  font-size: 80px;
-  font-weight: 900;
-  font-family: sans-serif;
-}
-
 h1.title{
-  font-size: 60px;
   display: inline-block;
 }
 
