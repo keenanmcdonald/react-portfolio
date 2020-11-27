@@ -62,6 +62,27 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount(){
+    window.addEventListener('scroll', () => {
+        this.onScroll()
+    })
+  }
+
+  onScroll(){
+    const titles = document.getElementsByClassName('section-title')
+    for (let title of titles){
+      let scroll = -(window.scrollY - title.parentElement.offsetTop) / window.innerHeight
+      if (scroll > 0){
+        title.style.marginLeft = (scroll*scroll*40)-5 + 'vw'
+        title.style.opacity = 80-(scroll * 100) + '%'  
+      }
+      else{
+        title.style.marginLeft = '-5vw'
+        title.style.opacity = '80%'
+      }
+    }
+  }
+
   selectProject(id){
     this.setState({transition: true})
     setTimeout(() => {

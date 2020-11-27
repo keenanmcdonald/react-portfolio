@@ -7,7 +7,7 @@
 }
 
 body{
-  background: #232C33;
+  background: linear-gradient(180deg, rgb(18, 23, 27) 10%, rgb(43, 54, 63) 90%);
 }
 
 header.header, main.main{
@@ -18,7 +18,7 @@ header.header, main.main{
 }
 
 section{
-  padding: 0 140px;
+  padding: 0 120px;
 }
 
 span.green{
@@ -29,23 +29,26 @@ span.blue{
 }
 
 h1{
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 900;
   font-family: 'Heebo', sans-serif;
   padding-top: 50px;
 }
 
+h1.section-title{
+  opacity: 50%;
+  margin-left: 35vw;
+}
 
+p{
+  font-size: 22px;
+}
 
 /*header*/
 header.header {
-  position: fixed;
   left: 0;
   right: 0;
-  background: rgb(18, 23, 27) ;
-  /*background: linear-gradient(180deg, rgba(35,44,51,1) 0%, rgba(35,44,51, .9) 68%, rgba(35,44,51,0) 100%);*/
-  z-index: 1001;
-  padding: 0 140px;
+  padding: 0 120px;
 }
 
 div.nav {
@@ -84,10 +87,7 @@ img.logo:hover{
 
 /*Hero*/
 section#hero{
-  height: 400vh;
-  padding-top: 113px;
   position: relative;
-  background: linear-gradient(180deg, rgb(18, 23, 27) 10%, rgba(35,44,51,1) 100%);
 }
 
 a.intro-link{
@@ -104,33 +104,8 @@ a.intro-link:hover{
   cursor: pointer;
 }
 
-div.hero-content{
-  max-width: 1600px;
-  height: calc(100vh - 160px);
-  margin-right: auto;
-  margin-left: auto;
-  position: fixed;
-  right: 120px;
-  left: 120px;
-}
-
-h1.intro{
-  padding: 0;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 300px;
-}
-
-
 /*work*/
 section#work{
-  margin-top: 50vh;
-  background-color: #232C33;
-  z-index: 1000;
   position: relative;
 }
 
@@ -237,12 +212,6 @@ a.repo:hover{
 
 /*Bio*/
 
-section#bio{
-  background-color: #232C33;
-  position: relative;
-  z-index: 1000;
-}
-
 .bio-photo{
   float: left;
   width: 33%;
@@ -253,7 +222,28 @@ section#bio{
 }
 
 p.bio-text{
-  font-size: 24px;
   letter-spacing: 0.06em;
   margin: 40px 0;
+}
+
+/*contact*/
+
+section#contact{
+  clear: both;
+}
+a.contact-link{
+  font-size: 65px;
+  font-weight: 900;
+  display: block;
+  text-decoration: none;
+  margin: 40px 0;
+  transition: .4s ease;
+  background: linear-gradient(to right, #eee 33%, #8FE388 50%) left;
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.contact-link:hover{
+  background-position: right;
 }

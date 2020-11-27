@@ -27,11 +27,12 @@ class Hero extends(React.Component){
     }
 
     render(){
+
         return (
             <section id='hero'>
-                <div className='hero-content'>
-                    {this.state.messages[this.state.displayMessage]}
-                </div>
+                <h1 className='intro'>
+                    Hi, I'm <span className='green'>Keenan McDonald</span>. I'm a software developer and designer based in Austin, TX. I build full-stack websites and applications. Check out some of <a href='#work' className='intro-link'>my work</a>, read more <a href='#bio' className='intro-link'>about me</a>, or learn how to <a href='#contact' className='intro-link'>contact me</a> below.
+                </h1>
             </section>
         )    
     }
