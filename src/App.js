@@ -21,7 +21,11 @@ class App extends React.Component {
           id: 0,
           title:'Terra', 
           selected:false, 
-          description: 'Terra is a mapping app geared towards hikers, climbers, mountaineers. It allows users to drop waypoints and draw routes on a 3D terrain map of the world.', 
+          description: (
+            <p>
+              Terra is a mapping app geared towards hikers, climbers, mountaineers. It allows users to drop waypoints and draw routes on a 3D terrain map of the world.
+            </p>
+          ),
           screenshotDesktop: 'terra-desktop.png', 
           screenshotMobile: 'terra-mobile.png', 
           techStack: {frontEnd: 'Javascript, React, CesiumJS, Resium', backEnd: 'NodeJS, Express, Postgresql'},

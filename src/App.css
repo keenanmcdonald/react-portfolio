@@ -162,7 +162,6 @@ section#work{
 
 .selected-project div{
   padding: 14px;
-  flex: 1
 }
 
 .selected-project h4{
@@ -177,6 +176,20 @@ section#work{
 .project-info-container{
   height: 100%;
   position: relative;
+  flex: 21;
+}
+
+.project-image-container{
+  flex: 19;
+}
+
+.project-description p {
+  font-size: 16px;
+  font-family: arbeit;
+}
+
+div.project-description{
+  padding: 0;
 }
 
 .selected-project .project-image{
@@ -236,33 +249,11 @@ a.repo:hover{
   margin-bottom: 4px;
 }
 
-h1.project-title{
+h2.project-title{
+  font-size: 50px;
   font-weight: 600;
   padding-top: 0;
-  margin-bottom: 20px;
-}
-
-button.expand-project{
-  background: transparent;
-  border: none;
-  border-radius: 4px;
-  font-size: 20px;
-  position: absolute;
-  bottom: 16px;
-  width: calc(100% - 28px);
-  padding-top: 16px;
-  margin-bottom: 12px;
-  transition: 0.5s;
-  opacity: 0.7;
-}
-button.expand-project:hover{
-  background:#87c2e03a;
-  cursor: pointer;
-  opacity: 1;
-}
-img.down-arrow{
-  width: 10%;
-  animation: Bounce 2s linear infinite;
+  margin-bottom: 14px;
 }
 
 

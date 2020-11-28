@@ -12,11 +12,8 @@ function SelectedProject(props){
                     </div>
                 </div>
                 <div className='project-info-container'>
-                    <h1 className='project-title'>{props.title}</h1>
-                    <p>{props.description}</p>
-                    <button className='expand-project'>
-                        <img className='down-arrow' alt='down arrow' src='/images/down-arrow.png'/>
-                    </button>
+                    <h2 className='project-title'>{props.title}</h2>
+                    <div className='project-description'>{props.description}</div>
                 </div>
         </div>
 
