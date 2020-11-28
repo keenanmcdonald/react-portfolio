@@ -12,8 +12,11 @@ function SelectedProject(props){
                     </div>
                 </div>
                 <div className='project-info-container'>
-                    <h4>{props.title}</h4>
+                    <h1 className='project-title'>{props.title}</h1>
                     <p>{props.description}</p>
+                    <button className='expand-project'>
+                        <img className='down-arrow' alt='down arrow' src='/images/down-arrow.png'/>
+                    </button>
                 </div>
         </div>
 

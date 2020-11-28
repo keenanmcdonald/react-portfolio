@@ -1,4 +1,5 @@
 import React from 'react'
+import Typewriter from 'typewriter-effect'
 
 class Hero extends(React.Component){
     constructor(props){
@@ -16,6 +17,7 @@ class Hero extends(React.Component){
         this.updateScroll = this.updateScroll.bind(this)
     }
 
+
     componentDidMount(){
         window.addEventListener('scroll', () => {
             this.updateScroll()
@@ -31,7 +33,21 @@ class Hero extends(React.Component){
         return (
             <section id='hero'>
                 <h1 className='intro'>
-                    Hi, I'm <span className='green'>Keenan McDonald</span>. I'm a software developer and designer based in Austin, TX. I build full-stack websites and applications. Check out some of <a href='#work' className='intro-link'>my work</a>, read more <a href='#bio' className='intro-link'>about me</a>, or learn how to <a href='#contact' className='intro-link'>contact me</a> below.
+                    Hi, I'm <span className='green'>Keenan McDonald</span>. I'm a software developer and designer based in Austin, TX. I build full-stack websites and applications. 
+                    <Typewriter 
+                        options={{
+                            wrapperClassName: 'tw-heading',
+                            delay: 40
+                        }}
+                        onInit={(typewriter) => {
+                            typewriter.typeString(`Check out some of <a href='#work' class='intro-link'>my work</a>, `)
+                            .pauseFor(500) 
+                            .typeString(`read more <a href='#bio' class='intro-link'>about me</a>, `)
+                            .pauseFor(300)
+                            .typeString(`or learn how to <a href='#contact' class='intro-link'>contact me</a> below.`)
+                            .start()
+                        }}
+                    />
                 </h1>
             </section>
         )    
@@ -39,3 +55,5 @@ class Hero extends(React.Component){
 }
 
 export default Hero
+
+//Check out some of <a href='#work' className='intro-link'>my work</a>, read more <a href='#bio' className='intro-link'>about me</a>, or learn how to <a href='#contact' className='intro-link'>contact me</a> below.

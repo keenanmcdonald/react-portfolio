@@ -21,7 +21,7 @@ class App extends React.Component {
           id: 0,
           title:'Terra', 
           selected:false, 
-          description: 'Terra is a mapping app geared towards hikers, climbers, mountaineers. It is intended to make planning for mountain ascents easier as it gives a detailed, 3D view of terrain rather than a flat topo map. It allows users to drop waypoints and draw routes on a 3D terrain map of the world. Users can share their routes with the community and access routes left by others.', 
+          description: 'Terra is a mapping app geared towards hikers, climbers, mountaineers. It allows users to drop waypoints and draw routes on a 3D terrain map of the world.', 
           screenshotDesktop: 'terra-desktop.png', 
           screenshotMobile: 'terra-mobile.png', 
           techStack: {frontEnd: 'Javascript, React, CesiumJS, Resium', backEnd: 'NodeJS, Express, Postgresql'},
@@ -42,7 +42,7 @@ class App extends React.Component {
           id: 2,
           title:'onBelay', 
           selected: false, 
-          description: `onBelay is a partner finder app for Rock Climbers. I created it because I and many other climbers in the community have trouble connecting quickly and easily with climbing partners especially when travelling. It let's climbers connect with other potential climbing partners that climb similar styles and within the same range of grades.`, 
+          description: `onBelay is a partner finder app for Rock Climbers. It let's climbers connect with other potential partners that climb similar styles and within the same difficulty.`, 
           screenshotDesktop: 'onbelay-desktop.png', 
           screenshotMobile: 'onbelay-mobile.png', 
           techStack: {frontEnd: 'Javascript, React', backEnd: 'NodeJS, Express, Postgresql, PostGIS'}
@@ -51,7 +51,7 @@ class App extends React.Component {
           id: 3,
           title: 'Why Not Me',
           selected: false,
-          description: `Minimal single-page site built to promote and sell the book Why Not Me: Finessing Life's Slings and Arrows.`,
+          description: `A minimal single-page site built to promote and sell the book Why Not Me: Finessing Life's Slings and Arrows.`,
           screenshotDesktop: 'whynotme-desktop.png',
           techStack: {frontEnd: 'HTML, CSS, Javascript'}
         },
@@ -69,44 +69,19 @@ class App extends React.Component {
   }
 
   onScroll(){
+    
     const titles = document.getElementsByClassName('section-title')
     for (let title of titles){
       let scroll = -(window.scrollY - title.parentElement.offsetTop) / window.innerHeight
-      if (scroll > 0){
-        title.style.marginLeft = (scroll*scroll*40)-5 + 'vw'
-        title.style.opacity = 80-(scroll * 100) + '%'  
-      }
-      else{
-        title.style.marginLeft = '-5vw'
-        title.style.opacity = '80%'
-      }
+        title.style.top = 120-(scroll*(50+(50*scroll))) + 'px'
+        console.log(scroll)
     }
+    
   }
 
   selectProject(id){
     this.setState({transition: true})
     setTimeout(() => {
-
-      //reorder array -- not working
-      /*
-      let selIndex;
-      let newIndex;
-      for (let i=0;i<this.state.projects.length;i++){
-        if (this.state.projects[i].id === this.state.selected){
-          selIndex = i
-        }
-        else if (this.state.projects[i].id === id){
-          newIndex = i
-        }
-      }
-      console.log(selIndex)
-      let sel = this.state.projects[selIndex]
-      const projectsNew = [...this.state.projects]
-      projectsNew.splice(selIndex, 1)
-      projectsNew.splice(newIndex, 0, sel)
-      console.log(projectsNew)
-      */
-
       this.setState({transition: false, selected: id})
     }, 150)
   }

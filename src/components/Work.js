@@ -22,7 +22,7 @@ function Work(props){
 
     return (
         <section id='work'>
-            <h1 className='section-title'>Work</h1>
+            <h1 data-aos='fade' className='section-title'>Work</h1>
             <div className='projects'>
                 <SelectedProject transition={props.transition} {...selected}/>
                 {thumbnails}
