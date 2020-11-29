@@ -8,7 +8,7 @@ function Contact(props){
             <h1 data-aos='fade' className='section-title'>Contact</h1>
             <div className='contact-content'>
                 <div id='email' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
-                    <img alt='mail icon' src='/images/email-white.png'/>
+                    <img alt='mail icon' src='./images/email-white.png'/>
                     <a target='_blank' rel="noreferrer" href='mailto:keenanjmcdonald@gmail.com' className='contact-link'>
                         <Typewriter 
                             options={{
@@ -42,7 +42,7 @@ function Contact(props){
                     </a>
                 </div> 
                 <div id='github' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
-                    <img alt='mail icon' src='/images/github-white.png'/>
+                    <img alt='mail icon' src='./images/github-white.png'/>
                     <a target='_blank' rel="noreferrer" href='http://github.com/keenanmcdonald' className='contact-link'>
                     <Typewriter 
                             options={{
@@ -75,7 +75,7 @@ function Contact(props){
                     </a>
                 </div> 
                 <div id='linkedin' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
-                    <img alt='mail icon' src='/images/linkedin-white.png'/>
+                    <img alt='mail icon' src='./images/linkedin-white.png'/>
                     <a target='_blank' rel="noreferrer" href='http://linkedin.com/in/keenan-mcdonald' className='contact-link'>
                     <Typewriter 
                             options={{

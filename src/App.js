@@ -118,7 +118,6 @@ class App extends React.Component {
     for (let title of titles){
       let scroll = -(window.scrollY - title.parentElement.offsetTop) / window.innerHeight
         title.style.top = 120-(scroll*(50+(50*scroll))) + 'px'
-        console.log(scroll)
     }
     
   }
