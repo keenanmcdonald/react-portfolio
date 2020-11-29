@@ -4,7 +4,6 @@ import SelectedProject from './SelectedProject'
 
 
 function Work(props){
-    console.log('work rerender')
 
     const thumbnails = []
     let selected = {}

@@ -16,7 +16,6 @@ function Contact(props){
                                 delay: 0.01,
                             }}
                             onInit={(tw) => {
-                                console.log('tw init')
                                 tw.pasteString('email')
                                 .callFunction(() => {
                                     document.getElementById('email').addEventListener('mouseenter', () => {
@@ -52,7 +51,6 @@ function Contact(props){
                                 deleteSpeed: 0.01,
                             }}
                             onInit={(tw) => {
-                                console.log('tw init')
                                 tw.pasteString('github')
                                 .callFunction(() => {
                                     document.getElementById('github').addEventListener('mouseenter', () => {
@@ -86,7 +84,6 @@ function Contact(props){
                                 deleteSpeed: 0.01,
                             }}
                             onInit={(tw) => {
-                                console.log('tw init')
                                 tw.pasteString('linkedin')
                                 .callFunction(() => {
                                     document.getElementById('linkedin').addEventListener('mouseenter', () => {
