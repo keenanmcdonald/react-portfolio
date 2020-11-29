@@ -7,7 +7,7 @@ function Contact(props){
         <section id='contact'>
             <h1 data-aos='fade' className='section-title'>Contact</h1>
             <div className='contact-content'>
-                <div id='email' className='contact-link-container' data-aos='fade'>
+                <div id='email' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
                     <img alt='mail icon' src='/images/email-white.png'/>
                     <a target='_blank' rel="noreferrer" href='mailto:keenanjmcdonald@gmail.com' className='contact-link'>
                         <Typewriter 
@@ -42,9 +42,9 @@ function Contact(props){
                         />
                     </a>
                 </div> 
-                <div id='github' className='contact-link-container' data-aos='fade'>
+                <div id='github' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
                     <img alt='mail icon' src='/images/github-white.png'/>
-                    <a target='_blank' rel="noreferrer" href='github.com/keenanmcdonald' className='contact-link'>
+                    <a target='_blank' rel="noreferrer" href='http://github.com/keenanmcdonald' className='contact-link'>
                     <Typewriter 
                             options={{
                                 wrapperClassName: 'tw-heading',
@@ -76,9 +76,9 @@ function Contact(props){
                         />
                     </a>
                 </div> 
-                <div id='linkedin' className='contact-link-container' data-aos='fade'>
+                <div id='linkedin' className='contact-link-container' data-aos='fade' data-aos-anchor-placement='top-bottom'>
                     <img alt='mail icon' src='/images/linkedin-white.png'/>
-                    <a target='_blank' rel="noreferrer" href='linkedin.com/in/keenan-mcdonald' className='contact-link'>
+                    <a target='_blank' rel="noreferrer" href='http://linkedin.com/in/keenan-mcdonald' className='contact-link'>
                     <Typewriter 
                             options={{
                                 wrapperClassName: 'tw-heading',
@@ -110,42 +110,6 @@ function Contact(props){
                         />
                     </a>
                 </div> 
-
-                <div id='instagram' className='contact-link-container' data-aos='fade'>
-                    <img alt='mail icon' src='/images/instagram-white.png'/>
-                    <a target='_blank' rel="noreferrer" href='www.instagram.com/keenanmcd' className='contact-link'>
-                        <Typewriter 
-                            options={{
-                                wrapperClassName: 'tw-heading',
-                                delay: 0.01,
-                            }}
-                            onInit={(tw) => {
-                                console.log('tw init')
-                                tw.pasteString('instagram')
-                                .callFunction(() => {
-                                    document.getElementById('instagram').addEventListener('mouseenter', () => {
-                                        tw
-                                        .stop()
-                                        .deleteAll(0.01)
-                                        .changeDelay(0.01)
-                                        .typeString('keenanmcd')
-                                        .start()
-                                    })
-                                    document.getElementById('instagram').addEventListener('mouseleave', () => {
-                                        tw
-                                        .stop()
-                                        .deleteAll(0.01)
-                                        .changeDelay(0.01)
-                                        .pasteString('instagram')
-                                        .start()
-                                    })
-                                }, tw)
-                                .start()
-                            }}
-                        />
-                    </a>
-                </div> 
-
             </div>
         </section>
     )

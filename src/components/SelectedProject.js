@@ -7,8 +7,8 @@ function SelectedProject(props){
                 <div key={0} className='project-image-container'>
                     <img className='project-image' alt={`screenshot of ${props.title}`} src={`/images/screenshots/${props.screenshotDesktop}`}/> 
                     <div className='link-container'>
-                        <a className='project-link live' href='www.google.com'>Live Site</a>
-                        <a className='project-link repo' href='www.google.com'>Repo</a>
+                        <a className='project-link live' target='_blank' rel="noreferrer" href={props.live}>Live</a>
+                        <a className='project-link repo' target='_blank' rel="noreferrer" href={props.repo}>Repo</a>
                     </div>
                 </div>
                 <div className='project-info-container'>

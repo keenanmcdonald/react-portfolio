@@ -56,7 +56,7 @@ h1.section-title{
 }
 
 p{
-  font-size: 22px;
+  font-size: 18px;
   font-family: arbeit;
 }
 
@@ -111,7 +111,7 @@ section#hero{
   position: static;
 }
 
-a.intro-link{
+a.intro-link, a.project-text-link{
   text-decoration: none;
   transition: .5s ease;
   background: linear-gradient(to right,#87c3e0 43%, #8FE388 53%) left;
@@ -120,7 +120,7 @@ a.intro-link{
   -webkit-text-fill-color: transparent;
 }
 
-a.intro-link:hover{
+a.intro-link:hover, a.project-text-link:hover{
   background-position: right;
   cursor: pointer;
 }
@@ -160,15 +160,6 @@ section#work{
   transition: all .15s ease;
 }
 
-.selected-project div{
-  padding: 14px;
-}
-
-.selected-project h4{
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
 .project:hover{
   cursor: pointer;
 }
@@ -177,63 +168,95 @@ section#work{
   height: 100%;
   position: relative;
   flex: 21;
+  padding: 14px;
+}
+
+div.project-info-container div{
+  padding: 0;
+}
+
+div.project-description p {
+  margin: 14px 0;
 }
 
 .project-image-container{
   flex: 19;
-}
-
-.project-description p {
-  font-size: 16px;
-  font-family: arbeit;
-}
-
-div.project-description{
+  position: relative;
   padding: 0;
+  margin: 14px;
+  height: max-content;
 }
+
+.project-image-container:hover .project-image{
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.project-image-container:hover .link-container{
+  opacity: 1;
+}
+
 
 .selected-project .project-image{
   border-radius: 4px 4px 0 0;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  margin-top: 0;
 }
 
 div.link-container{
+  transition: 0.5s ease;
+  opacity: 0;
   padding: 0;
-  position: relative;
-  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
   display: flex;
-  margin-top: -3px;
-  border-top: solid black 1px;
-  display: none;
+  flex-direction: column;
 }
 
 .selected-project a.project-link{
   display: block;
   text-align: center;
+  padding-top: 100px;
   width: 100%;
+  height: 50%;
   text-decoration: none;
-  padding: 14px;
-  font-size: 20px;
-  color: black;
+  padding: 20px;
+  color: white;
+  border: none;
   transition: all 0.3s ease;
+  background-size: 300%;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a.project-link:hover{
+  background-position: right;
+  cursor: pointer;
 }
 
 a.live{
-  background: linear-gradient(to left, #6aac65 33%, #8FE388 66%) right;
-  background-size: 300%;
-  border-radius: 0 0 0 6px;
-}
-a.repo{
-  background: linear-gradient(to right, #628fa5 33%, #87c3e0 66%) left;
-  background-size: 300%;
-  border-radius: 0 0 6px 0;
+  background: linear-gradient(to right, transparent 40%, #90e38883 60%) left;
+  border-radius: 4px 4px 0 0;
 }
 
-a.live:hover{
-  background-position: left;
+a.repo{
+  background: linear-gradient(to right, transparent 40%, #87c2e080 60%) left;
+  border-radius: 0 0 4px 4px;
 }
-a.repo:hover{
-  background-position: right;
-}
+
 
 .project-image{
   margin-top: 4px;
@@ -336,14 +359,165 @@ div.contact-link-container:hover span.tw-heading{
   color: #8FE388 !important;
 }
 
-div.contact-link-container:hover .Typewriter__cursor{
-  visibility: visible; 
-}
 .contact-link-container{
   margin-bottom: 20px;
 }
+div.contact-link-container:hover .Typewriter__cursor{
+  visibility: visible; 
+}
 
-section#contact .Typewriter__cursor{
+div.contact-link-container .Typewriter__cursor{
   visibility: hidden;
 }
 
+@media only screen and (max-width: 800px) {
+  div.nav{
+    float: none;
+    margin: auto;
+    justify-content: space-between;
+  }
+  div.nav a{
+    margin: 28px 0;
+  }
+  h1.intro, .tw-heading{
+    font-size: 45px;
+    padding: 0;
+  }
+  section{
+    padding: 20px 80px;
+  }
+
+  h2.project-title{
+    font-size: 32px;
+  }
+  .selected-project{
+    flex-direction: column;
+  }
+  h1.section-title{
+    left: -4px;
+  }
+  .contact-content img{
+    height: 42px;
+  }
+
+  a.contact-link span.tw-heading, a.contact-link span.Typewriter__cursor{
+    font-size: 34px;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px){
+  section{
+    padding: 20px 20px;
+  }
+  h1.intro, .tw-heading{
+    font-size: 40px;
+  }
+
+  h1.section-title{
+    padding-top: 10px;
+    position: static;
+    font-size: 40px;
+    margin: 0;
+    writing-mode: horizontal-tb;
+    transform: none !important;
+  }
+  header.header{
+    padding: 0 20px;
+  }
+
+  .project-image{
+    box-shadow: none;
+  }
+
+  .project-image-container:hover .project-image{
+    opacity: 1;
+  }
+
+  .project-image-container{
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  div.link-container{
+    opacity: 1;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    -ms-transform: none;
+    height: 60px;
+  }
+  .selected-project a.project-link{
+    height: 100%;
+  } 
+
+  a.live{
+    background-color: #53aa4b;
+    border-radius: 0 0 0 4px;
+  }
+
+  a.repo{
+    background-color: #4181a1;
+    border-radius: 0 0 4px 0;
+  }
+
+  div.project{
+    padding: 10px;
+  }
+
+  img.bio-photo{
+    width: 40%;
+    margin-right: 20px;
+    margin-bottom: 6px;
+  }
+  .contact-content{
+    margin-top: 40px;
+  }
+  .contact-content img{
+    height: 32px;
+  }
+  a.contact-link span.tw-heading, a.contact-link span.Typewriter__cursor{
+    font-size: 20px;
+  }
+  a.contact-link{
+    bottom: 8px;
+    padding-left: 10px;
+  }
+}
+
+@media (hover: none) {
+  .project-image{
+    box-shadow: none;
+  }
+
+  .project-image-container:hover .project-image{
+    opacity: 1;
+  }
+
+  .project-image-container{
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  div.link-container{
+    opacity: 1;
+    position: static;
+    flex-direction: row;
+    transform: none;
+    -ms-transform: none;
+    height: 60px;
+  }
+  .selected-project a.project-link{
+    height: 100%;
+  } 
+
+  a.live{
+    background-color: #53aa4b;
+    border-radius: 0 0 0 4px;
+  }
+
+  a.repo{
+    background-color: #4181a1;
+    border-radius: 0 0 4px 0;
+  }
+
+}
